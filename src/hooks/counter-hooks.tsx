@@ -4,7 +4,6 @@ export function useCounter() {
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(0);
-    // const [hasAnimated, setHasAnimated] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
     const hasAnimatedRef = useRef(false);
 
