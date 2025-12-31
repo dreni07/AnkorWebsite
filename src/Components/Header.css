@@ -1,0 +1,363 @@
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--white-color);
+    padding: 45px 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #cccccc36;
+  }
+  
+  .header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 100%;
+  }
+  
+  /* Left Section - Logo */
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo-image {
+    height: 85px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    text-transform: lowercase;
+    position: relative;
+  }
+  
+  .logo-text::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark-blue);
+    opacity: 0.3;
+  }
+  
+  /* Middle Section - Navigation */
+  .header-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .nav-list li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .nav-list a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 450;
+     transition: opacity 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    opacity: 1;
+    transition: opacity 1s;
+    color: var(--red-color)
+  }
+  
+  .chevron {
+    font-size: 10px;
+    color: var(--dark-blue);
+    display: inline-block;
+  }
+  
+  /* Right Section - Phone & Button */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .phone-link {
+    color: var(--red-color);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--red-color);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+  
+  .phone-link:hover {
+    opacity: 0.7;
+  }
+  
+  .quote-button {
+    background-color: var(--white-color);
+    color: var(--red-color);
+    border: 1px solid var(--red-color);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .quote-button:hover {
+    background-color: var(--red-color);
+    color: var(--white-color);
+  }
+
+  /* Hamburger Menu Button */
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+
+  .hamburger-menu.hidden {
+    display: none !important;
+  }
+
+  .hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-blue);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger-line.active:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .hamburger-line.active:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-line.active:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Sidebar Overlay */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background-color: var(--white-color);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    border: 1px solid #ccc;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .sidebar-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: var(--dark-blue);
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border: 1px solid #ccc;
+  }
+
+  .sidebar-close:hover {
+    opacity: 0.7;
+  }
+
+  .sidebar-nav {
+    margin-top: 0;
+  }
+
+  .sidebar-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar-nav-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar-nav-list a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 450;
+    transition: opacity 0.2s;
+  }
+
+  .sidebar-nav-list a:hover {
+    opacity: 0.7;
+  }
+
+  .sidebar-nav-list .chevron {
+    font-size: 10px;
+    color: var(--dark-blue);
+  }
+
+  /* Responsive Design */
+  
+  /* Mobile - up to 768px */
+  @media (max-width: 768px) {
+    .header-nav,
+    .header-right {
+      display: none;
+    }
+
+    .hamburger-menu {
+      display: flex;
+    }
+
+    .header {
+      padding: 15px 25px;
+    }
+
+    .sidebar-overlay {
+      display: block;
+    }
+  }
+
+  /* Tablet - 768px to 1024px */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .header-nav,
+    .header-right {
+      display: none;
+    }
+
+    .hamburger-menu {
+      display: flex;
+    }
+
+    .header {
+      padding: 20px 40px;
+    }
+
+    .sidebar-overlay {
+      display: block;
+    }
+
+    .nav-list {
+      gap: 20px;
+    }
+  }
+
+  /* Laptop - 1024px to 1440px */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .header {
+      padding: 20px 40px;
+    }
+
+    .header-nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-list {
+      gap: 25px;
+    }
+
+    .nav-list a {
+      font-size: 15px;
+    }
+
+    .phone-link {
+      font-size: 14px;
+    }
+
+    .quote-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+
+    .header-right {
+      gap: 15px;
+    }
+  }
+
+  /* Large screens - above 1440px */
+  @media (min-width: 1441px) {
+    .header {
+      padding: 45px 80px;
+    }
+  }

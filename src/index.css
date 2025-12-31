@@ -1,0 +1,18 @@
+:root {
+  --white-color: #FFFFFF;
+  --light-gray: #F8F8F8;
+  --dark-gray: #EDEDED;
+  --red-color: #e41e20;
+  --dark-blue: #0b091f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+

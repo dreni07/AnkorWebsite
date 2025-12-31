@@ -1,0 +1,136 @@
+.transform {
+    padding: 120px 100px;
+    background: linear-gradient(135deg, var(--red-color) 0%, rgba(228, 30, 32, 0.85) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.transform::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at top right, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.transform .container {
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.transform-content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.transform-title {
+    font-size: 52px;
+    color: var(--white-color);
+    margin: 0 0 25px 0;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.transform-text {
+    font-size: 19.5px;
+    color: var(--white-color);
+    margin: 0 0 40px 0;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.transform-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.transform-button {
+    background-color: transparent;
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.transform-button:hover {
+    background-color: var(--white-color);
+    color: var(--red-color);
+}
+
+/* Responsive Design */
+
+/* Mobile - up to 768px */
+@media (max-width: 768px) {
+    .transform {
+        padding: 60px 25px;
+    }
+
+    .transform-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .transform-text {
+        font-size: 17.5px;
+        margin-bottom: 30px;
+    }
+
+    .transform-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .transform-button {
+        width: 100%;
+        max-width: 300px;
+        padding: 13px 25px;
+    }
+}
+
+/* Tablet - 768px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .transform {
+        padding: 90px 40px;
+    }
+
+    .transform-title {
+        font-size: 42px;
+    }
+
+    .transform-text {
+        font-size: 18.5px;
+    }
+
+    .transform-button {
+        padding: 14px 28px;
+    }
+}
+
+/* Laptop - 1024px to 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .transform {
+        padding: 100px 60px;
+    }
+
+    .transform-title {
+        font-size: 48px;
+    }
+
+    .transform-content {
+        max-width: 1100px;
+    }
+}
+

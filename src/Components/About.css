@@ -1,0 +1,116 @@
+.about {
+    padding: 80px 100px 40px 100px;
+    background-color: var(--white-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.about .container {
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-label {
+    font-size: 14px;
+    color: var(--red-color);
+    margin: 0 0 15px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.about-title {
+    font-size: 30px;
+    color: var(--dark-blue);
+    margin: 0 auto 40px auto;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 1200px;
+}
+
+.about-title strong {
+    font-weight: 600;
+}
+
+.about-button {
+    background-color: transparent;
+    color: var(--dark-blue);
+    border: 1px solid rgba(11, 9, 31, 0.2);
+    padding: 18px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    border-radius: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-button:hover {
+    border-color: var(--red-color);
+}
+
+.arrow-right {
+    font-size: 18px;
+    display: inline-block;
+}
+
+/* Responsive Design */
+
+/* Mobile - up to 768px */
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 25px 20px 25px;
+    }
+
+    .about-label {
+        font-size: 13px;
+    }
+
+    .about-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .about-button {
+        font-size: 14px;
+        padding: 16px 18px;
+    }
+
+    .arrow-right {
+        font-size: 16px;
+    }
+}
+
+/* Tablet - 768px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about {
+        padding: 60px 40px 30px 40px;
+    }
+
+    .about-title {
+        font-size: 26px;
+        margin-bottom: 35px;
+    }
+
+    .about-button {
+        font-size: 15px;
+    }
+}
+
+/* Laptop - 1024px to 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .about {
+        padding: 70px 60px 35px 60px;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+}
+
