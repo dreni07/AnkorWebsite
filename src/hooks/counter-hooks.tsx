@@ -4,7 +4,7 @@ export function useCounter() {
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(0);
-    const [hasAnimated, setHasAnimated] = useState(false);
+    // const [hasAnimated, setHasAnimated] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
     const hasAnimatedRef = useRef(false);
 
@@ -44,7 +44,7 @@ export function useCounter() {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting && !hasAnimatedRef.current) {
                         hasAnimatedRef.current = true;
-                        setHasAnimated(true);
+                        // setHasAnimated(true);
                         animateCounter(targetValues.count1, setCount1);
                         animateCounter(targetValues.count2, setCount2);
                         animateCounter(targetValues.count3, setCount3);
