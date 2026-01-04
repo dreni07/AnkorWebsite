@@ -29,7 +29,7 @@
 }
 
 .footer-logo-image {
-    height: 60px;
+    height: 50px;
     width: auto;
     object-fit: contain;
 }
@@ -92,15 +92,16 @@
     }
 
     .footer .container {
-        flex-direction: column;
-        gap: 25px;
-        align-items: flex-start;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .footer-left {
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .footer-nav {

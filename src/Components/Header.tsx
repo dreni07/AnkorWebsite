@@ -1,5 +1,6 @@
 import { useHeader } from '../hooks/header-hooks';
 import './Header.css';
+import logo from '../assets/ankor-logo.png';
 
 export function Header () {
     const { isMenuOpen, toggleMenu, closeMenu } = useHeader();
@@ -42,7 +43,7 @@ export function Header () {
            
             <div className="header-logo">
               <a href="#home" onClick={(e) => handleSmoothScroll(e, 'home')}>
-                <img src="/codeblacklogo.png" alt="Ankor Logo" className="logo-image" />
+                <img src={logo} alt="Ankor Logo" className="logo-image" />
               </a>
             </div>
 

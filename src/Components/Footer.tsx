@@ -1,4 +1,5 @@
 import './Footer.css';
+import logo from '../assets/ankor-logo-2.png';
 
 export function Footer() {
     return(
@@ -8,7 +9,7 @@ export function Footer() {
                 <div className="footer-left">
                     <div className="footer-logo">
                         <a href="#home">
-                            <img src="/codewhitelogo.png" alt="Ankor Logo" className="footer-logo-image" />
+                            <img src={logo} alt="Ankor Logo" className="footer-logo-image" />
                         </a>
                     </div>
                 </div>
