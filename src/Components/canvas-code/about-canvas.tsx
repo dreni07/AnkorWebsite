@@ -11,7 +11,6 @@ export function AboutCanvas() {
                     </linearGradient>
                 </defs>
                 
-                {/* 4 Wavy moving lines - full lines that cross each other */}
                 <path d="M0,100 Q480,200 960,100 T1920,100" stroke="var(--red-color)" strokeWidth="1.5" fill="none" opacity="0.1">
                     <animate attributeName="d" 
                         values="M0,100 Q480,200 960,100 T1920,100;M0,300 Q480,50 960,300 T1920,300;M0,100 Q480,200 960,100 T1920,100" 
